@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background-image{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #04060652;
+}
+.menu_bar{
+    width: 100%;
+    height: 80%;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.menu_bar ul {
+    display: inline-flex;
+    list-style: none;
+}
+.menu_bar ul li{
+    margin-left: 25px;
+    padding: 7px;
+}
+.menu_bar ul li a{
+    text-decoration:none;
+    color: aliceblue;
+    transition: 0.4s;
+    font-family: Arial;
+    font-weight: bold;
+}
+.active, .menu_bar ul li:hover{
+    background:rgba(131, 170, 210, 0.3);
+    border-radius: 3px;
+    transition: 0.5s;
+} 
+.logo{
+    width: 70px;
+    height: 55px;
+    margin-left: 4px;
+    margin-top: -5px;
+    border-radius: 20px;
+}
+.logo_name{
+    font-size:20px;
+    font-style:oblique;
+    margin-left: 75px;
+    margin-top: -55px;
+    color:rgba(147, 180, 199, .6);
+}
+.description{
+    position: absolute;
+    width: 90%;
+    height: 85%;
+    padding: 30px;
+    margin-top: 15px;
+    margin-left: 60px;
+    background:rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+.P{
+    position: absolute;
+    color: rgb(189, 221, 241);
+    font-family: Arial;
+    font-size: 34px;
+    writing-mode:vertical-rl;
+    text-orientation: upright;
+}
+.P1{
+    margin-left: 22px;
+    margin-top: 20px; 
+}
+.P2{
+    margin-left: 22px;
+    margin-top: 238px;
+}
+.P3{
+    margin-left: 1025px;
+    margin-top: 0px;
+    letter-spacing: -6.4px;
+}
+.P4{
+    margin-left: 1025px;
+    margin-top: 235px;
+}    
+.Tour{
+    position: absolute;
+    width: 400px;
+    height: 43%;
+    border-radius: 15px;
+    padding: 15px 25px;
+    cursor: pointer;
+    background-size: cover;
+}
+.TourGauche{
+    transition: transform 0.8s;
+}
+.TourGauche:hover{
+    transform: translateX(40px);
+}
+.TourDroite{
+    transition: transform 0.8s;
+}
+.TourDroite:hover{
+    transform: translateX(-40px);
+}
+.Tour1{
+    margin-left:30px;
+    background-image: url(./Tokyo.jpg);
+}
+.Tour2{
+    margin-left:662px;
+    background-image: url(Tunisie.jpg);
+}
+.Tour3{
+    margin-top: 238px;
+    margin-left:30px;
+    background-image: url(./Turkey.jpg);
+}
+.Tour4{
+    margin-top: 238px;
+    margin-left:662px;
+    background-image: url(./Poland.jpg);
+}
+

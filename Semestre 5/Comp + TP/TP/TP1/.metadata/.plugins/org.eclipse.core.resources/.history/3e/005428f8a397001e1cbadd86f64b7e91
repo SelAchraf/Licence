@@ -1,0 +1,88 @@
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class GestionEtudiants {
+
+    public static void main(String[] args) {
+        String nomFichier = "etudiants.txt"; // Remplacez par le nom de votre fichier
+
+        List<String[]> etudiants = lireFichier(nomFichier);
+
+        if (etudiants.isEmpty()) {
+            System.out.println("Le fichier spécifié n'a pas été trouvé ou est vide.");
+            return;
+        }
+
+        while (true) {
+            System.out.println("\nOptions :");
+            System.out.println("1. Afficher les étudiants nés avant une année donnée.");
+            System.out.println("2. Afficher les étudiants dont le nom commence par une certaine chaîne.");
+            System.out.println("3. Quitter le programme.");
+
+            java.util.Scanner scanner = new java.util.Scanner(System.in);
+            System.out.print("Entrez le numéro de l'option : ");
+            String choix = scanner.nextLine();
+
+            switch (choix) {
+                case "1":
+                    System.out.print("Entrez l'année limite : ");
+                    int anneeLimite = scanner.nextInt();
+                    scanner.nextLine(); // Consommer la nouvelle ligne restante après nextInt()
+                    afficherEtudiantsParAnnee(etudiants, anneeLimite);
+                    break;
+                case "2":
+                    System.out.print("Entrez le préfixe du nom : ");
+                    String prefixeNom = scanner.nextLine();
+                    afficherEtudiantsParNom(etudiants, prefixeNom);
+                    break;
+                case "3":
+                    System.out.println("Programme terminé.");
+                    System.exit(0);
+                default:
+                    System.out.println("Option invalide. Veuillez entrer un numéro valide.");
+            }
+        }
+    }
+
+    private static List<String[]> lireFichier(String nomFichier) {
+        List<String[]> etudiants = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(nomFichier))) {
+            String ligne;
+            while ((ligne = br.readLine()) != null) {
+                String[] infos = ligne.split(",");
+                if (infos.length == 3) {
+                    etudiants.add(infos);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return etudiants;
+    }
+
+    private static void afficherEtudiantsParAnnee(List<String[]> etudiants, int anneeLimite) {
+        for (String[] etudiant : etudiants) {
+            if (Integer.parseInt(etudiant[2]) < anneeLimite) {
+                afficherEtudiant(etudiant);
+            }
+        }
+    }
+
+    private static void afficherEtudiantsParNom(List<String[]> etudiants, String prefixeNom) {
+        for (String[] etudiant : etudiants) {
+            if (etudiant[0].toLowerCase().startsWith(prefixeNom.toLowerCase())) {
+                afficherEtudiant(etudiant);
+            }
+        }
+    }
+
+    private static void afficherEtudiant(String[] etudiant) {
+        System.out.println("Nom: " + etudiant[0] + ", Prénom: " + etudiant[1] + ", Année de naissance: " + etudiant[2]);
+    }
+}

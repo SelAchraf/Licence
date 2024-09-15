@@ -1,0 +1,27 @@
+%%
+%class run
+%standalone
+%line
+%column
+
+%{
+	int numCount = 0;
+	int numSomme = 0;
+%}
+%eof{
+	if(numSomme == 0)
+		System.out.println(0 number in file. \n) ;
+	else
+		 System.out.println(“La moyenne de : “+ numSomme +” / ”+ numCount  +“est  :“+ numSomme/numCount) ;	 	
+%eof}
+%%
+
+expr = [0-9]*;
+expr{
+           numCount = numCount + 1 ;
+           numSomme = numSomme + Integer.parseInt(yytext()) ;	
+}
+
+\n {}
+. {}
+

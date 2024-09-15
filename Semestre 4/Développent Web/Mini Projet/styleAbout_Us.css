@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background-image{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #04060652;
+}
+.menu_bar{
+    width: 100%;
+    height: 80%;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.menu_bar ul {
+    display: inline-flex;
+    list-style: none;
+}
+.menu_bar ul li{
+    margin-left: 25px;
+    padding: 7px;
+}
+.menu_bar ul li a{
+    text-decoration:none;
+    color: aliceblue;
+    transition: 0.4s;
+    font-family: Arial;
+    font-weight: bold;
+}
+.active, .menu_bar ul li:hover{
+    background:rgba(131, 170, 210, 0.3);
+    border-radius: 3px;
+    transition: 0.5s;
+} 
+.logo{
+    width: 70px;
+    height: 55px;
+    margin-left: 4px;
+    margin-top: -5px;
+    border-radius: 20px;
+}
+.logo_name{
+    font-size:40px;
+    font-style:oblique;
+    margin-left: 75px;
+    margin-top: -55px;
+    color:rgba(147, 180, 199, .6);
+}
+.description{
+    position: absolute;
+    width: 43%;
+    padding: 10px;
+    background:rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+.description1{
+    height: 75%;
+    margin-top: 50px;
+    margin-left: 50px; 
+}
+.description2{
+    height:25.5%;
+    margin-top: 350px;
+    margin-left: 668px;
+}
+.titre{
+    position: absolute;
+    color:rgb(128, 128, 139);
+    text-align: justify;
+    font-size: 40px;
+}
+.titre1{
+    margin-left: 167px;
+    letter-spacing: 2px;  
+}
+.titre2{
+    margin-left: 163px;
+    letter-spacing: 1px;
+}
+.text{
+    position: absolute;
+    margin-right: 13px;
+    text-align: justify;
+    color: rgb(221, 236, 248);
+}
+.text1{
+    margin-top: 50px;
+    font-size: 21.2px;
+}
+.text2{
+    margin-top: 53px;
+    font-size: 21px;
+}
+.espace_message{
+    position: absolute;
+    width: 35%;
+    height: 48%;
+    margin-top: 53px;
+    margin-left: 715px;
+    background-color:rgba(147, 180, 199, .6);
+    border-radius: 20px;
+}
+.titre_message{
+    position: absolute;
+    margin-left: 125px;
+    margin-top: 5px;
+    color:rgba(19, 35, 45, 0.7);
+    font-size: 30px;
+}
+input{
+    position: absolute;
+    width: 300px;
+    height: 35px;
+    padding: 10px;
+    padding-left: 13px;
+    margin-left: 72px;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    background-color: rgba(19, 35, 45, 0.7);
+    border-radius: 20px;
+}
+.name input{
+    margin-top: 50px;
+}
+.email input{
+    margin-top: 90px;
+}
+input::placeholder{
+    position: absolute;
+    font-size: 15px;
+    color:rgba(147, 180, 199, .6);
+}
+textarea{
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    padding-left:13px ;
+    margin-top: 130px;
+    margin-left: 72px;
+    border: none;
+    outline: none;
+    color: aliceblue;
+    background-color: rgba(19, 35, 45, 0.7);
+    border-radius: 10px;
+}
+textarea::placeholder{
+    position: absolute;
+    font-size: 16.5px;
+    color:rgba(147, 180, 199, .6);
+}
+.send{
+    position: absolute;
+    width: 250px;
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: rgba(57, 57, 212,0.7);
+    border-radius: 10px;
+    bottom: 28px;
+    margin-left: 97px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.send:hover{
+    box-shadow: 0px 1px 5px black;
+    color:  rgb(57, 57, 212);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.send:hover:active{
+    opacity: 0.3;
+}
+.message{
+    position: absolute;
+    bottom: 5px;
+    font-size: 18px;
+}
+.success{
+    margin-left: 100px;
+    color: rgb(0, 255, 0);
+    display: none;
+}
+.error{
+    margin-left: 135px;
+    color: rgb(189, 9, 9);
+    display: none;
+}
+

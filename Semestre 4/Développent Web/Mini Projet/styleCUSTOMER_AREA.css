@@ -1,0 +1,186 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background-image{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #04060652;
+}
+.menu_bar{
+    width: 100%;
+    height: 80%;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.menu_bar ul {
+    display: inline-flex;
+    list-style: none;
+}
+.menu_bar ul li{
+    margin-left: 25px;
+    padding: 7px;
+}
+.menu_bar ul li a{
+    text-decoration:none;
+    color: aliceblue;
+    transition: 0.4s;
+    font-family: Arial;
+    font-weight: bold;
+}
+.active, .menu_bar ul li:hover{
+    background:rgba(131, 170, 210, 0.3);
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.conexion_menu{
+    display: none;
+}
+.menu_bar ul li:hover .conexion_menu{
+    display:block;
+    position: absolute;
+    background:rgba(5, 25, 104,0.6);
+    margin-top: 9px;
+    margin-left: -130px ;
+    border-radius: 5px;
+}
+.menu_bar ul li:hover .conexion_menu ul{
+    margin:10px;
+}
+.menu_bar ul li:hover .conexion_menu ul li{
+    width: 130px;
+    margin-left: 0px;
+}
+.logo{
+    width: 70px;
+    height: 55px;
+    margin-left: 4px;
+    margin-top: -5px;
+    border-radius: 20px;
+}
+.logo_name{
+    font-size:20px;
+    font-style:oblique;
+    margin-left: 75px;
+    margin-top: -55px;
+    color:rgba(147, 180, 199, .6);
+}
+.description{
+    position: absolute;
+    width: 490px;
+    height: 370px;
+    padding: 10px;
+    margin-top: 90px;
+    margin-left: 40px; 
+    background:rgba(147, 180, 199, .6);
+    border-radius: 25px;
+}
+.Titre{
+    position: absolute;
+    margin-left: 15px;
+    font-size: 42px;
+    color:rgb(5, 25, 104);
+    letter-spacing: 2px;
+}
+.Paragraphe{ 
+    padding-right: 10px;
+    margin-top: 55px;
+    position: absolute;
+    color:rgb(0, 0, 0); 
+    font-size: 23px;
+    text-align:justify;
+}
+.info_space{
+    position: absolute;
+    width: 55%;
+    height: 75%;
+    margin-top: 48px;
+    margin-left: 553px;
+    background-color:rgba(19, 35, 45, 0.7);
+    border-radius: 20px;
+}
+.photo_space{
+    position: absolute;
+    width: 25%;
+    height: 30%;
+    margin-top: 10px;
+    margin-left: 15px;
+    background-color:rgba(147, 180, 199, .6);
+    border-radius: 15px;
+}
+.PHOTO{
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 46px;
+    color: rgba(19, 35, 45, 0.7) ;
+}
+.INFO{
+    position: absolute;
+    width: 70%;
+    height: 30%;
+    margin-top: 10px;
+    margin-left: 201px;
+    background-color:rgba(147, 180, 199, .6);
+    border-radius: 15px;
+}
+.TITRE{
+    position: absolute;
+    margin-left: 128px;
+    margin-top: 5px;
+    color: rgba(19, 35, 45, 0.7);
+}
+.booking_list{
+    position: absolute;
+    width: 96.2%;
+    height: 62.3%;
+    margin-top: 160px;
+    margin-left: 15px;
+    background-color:rgba(147, 180, 199, .6);
+    border-radius: 15px;
+}
+.LIST{
+    position: absolute;
+    margin-left: 215px;
+    margin-top: 5px;
+    color: rgba(19, 35, 45, 0.7) ;
+}
+.partie{
+    position: absolute;
+    margin-top: 50px;
+    font-size: 23px;
+    color:black;
+}
+.droite{
+    margin-left: 10px;
+}
+.gauche{
+    margin-left: 230px;
+}
+.reservation{
+    position: absolute;
+    background-color: rgba(19, 35, 45, 0.7);
+    width: 30%;
+    height: 75%;
+    margin-top: 50px;
+    border-radius: 15px;
+}
+.reservation1{
+    margin-left: 20px;
+}
+.reservation2{
+    margin-left: 235px;
+}
+.reservation3{
+    margin-left: 450px;
+}

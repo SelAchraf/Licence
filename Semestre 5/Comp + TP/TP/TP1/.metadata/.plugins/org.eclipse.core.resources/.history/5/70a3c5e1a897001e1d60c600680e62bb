@@ -1,0 +1,66 @@
+package Exo3;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Exo3 {
+
+    public static void main(String[] args) {
+        String Expression = "benahmed,ahmed,1990";
+        String[] infos = Expression.split(",");
+        List<String[]> etudiants ; 
+        if (infos.length == 3) {
+            etudiants.add(infos);
+        }
+        
+        while (true) {
+            System.out.println("\nOptions :");
+            System.out.println("1. Afficher les étudiants nés avant une année donnée.");
+            System.out.println("2. Afficher les étudiants dont le nom commence par une certaine chaîne.");
+
+            Scanner S = new Scanner(System.in);
+            System.out.print("Entrez le numéro de l'option : ");
+            String choix = S.nextLine();
+
+            switch (choix) {
+                case "1":
+                    System.out.print("Entrez l'année limite : ");
+                    int anneeLimite = S.nextInt();
+                    S.nextLine(); 
+                    afficherEtudiantsParAnnee(etudiants, anneeLimite);
+                    break;
+                case "2":
+                    System.out.print("Entrez le préfixe du nom : ");
+                    String prefixeNom = S.nextLine();
+                    afficherEtudiantsParNom(etudiants, prefixeNom);
+                    break;
+                default:
+                    System.out.println("Option invalide. Veuillez entrer un numéro valide.");
+            }
+            
+        }
+    }
+
+    private static void afficherEtudiantsParAnnee(List<String[]> etudiants, int anneeLimite) {
+        for (String[] etudiant : etudiants) {
+            if (Integer.parseInt(etudiant[2]) < anneeLimite) {
+                afficherEtudiant(etudiant);
+            }
+        }
+    }
+
+    private static void afficherEtudiantsParNom(List<String[]> etudiants, String prefixeNom) {
+        for (String[] etudiant : etudiants) {
+            if (etudiant[0].toLowerCase().startsWith(prefixeNom.toLowerCase())) {
+                afficherEtudiant(etudiant);
+            }
+        }
+    }
+
+    private static void afficherEtudiant(String[] etudiant) {
+        System.out.println("Nom: " + etudiant[0] + ", Prénom: " + etudiant[1] + ", Année de naissance: " + etudiant[2]);
+    }
+}

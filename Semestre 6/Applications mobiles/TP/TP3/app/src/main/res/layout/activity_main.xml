@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="511dp"
+        android:layout_height="727dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="151dp">
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                tools:layout_editor_absoluteX="96dp"
+                tools:layout_editor_absoluteY="56dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp">
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                tools:layout_editor_absoluteX="101dp"
+                tools:layout_editor_absoluteY="48dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="138dp">
+
+            <EditText
+                android:id="@+id/editTextNumberDecimal3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                tools:layout_editor_absoluteX="92dp"
+                tools:layout_editor_absoluteY="50dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <Button
+                android:id="@+id/moybutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moy"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="43dp" />
+
+            <Button
+                android:id="@+id/maxbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max"
+                tools:layout_editor_absoluteX="159dp"
+                tools:layout_editor_absoluteY="46dp" />
+
+            <Button
+                android:id="@+id/minbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Min"
+                tools:layout_editor_absoluteX="292dp"
+                tools:layout_editor_absoluteY="48dp" />
+
+            <Space
+                android:layout_width="43dp"
+                android:layout_height="32dp"
+                tools:layout_editor_absoluteX="114dp"
+                tools:layout_editor_absoluteY="63dp" />
+
+            <Space
+                android:layout_width="31dp"
+                android:layout_height="34dp"
+                tools:layout_editor_absoluteX="260dp"
+                tools:layout_editor_absoluteY="59dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/effacerbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effacer"
+                tools:layout_editor_absoluteX="37dp"
+                tools:layout_editor_absoluteY="43dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="125dp"
+                android:layout_height="55dp"
+                android:text="TextView"
+                tools:layout_editor_absoluteX="250dp"
+                tools:layout_editor_absoluteY="44dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

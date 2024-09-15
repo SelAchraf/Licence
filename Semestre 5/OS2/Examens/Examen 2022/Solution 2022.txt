@@ -1,0 +1,117 @@
+Question 01: 
+# mono proc = 1 proc 
+
+	Semaphore S = 1;
+
+	P(S); // Section d'entrer 
+	SC
+	V(S); // Section de Sortie 
+
+Exercice 01:
+
+Voiture     |    Personne
+
+#1 10 personne a la fois || 1 voiture.
+#2 tantque kayen personne yemchi :
+	idi ja peronne 2 et nbP < 10 : 
+		Y3adi;
+
+Q1:le type du probleme est :
+	Lecteur / redacteur 
+        2 proc acced a une recurce et on doit metre une priorite a lecteur(Perosnne).
+
+Q2: 
+
+        Semaphore mutexV = 1, mutexP = 0, mutexNb = 1;
+	int nbP = 0;
+
+	Voiture{
+		P(mutexV);
+		Travercer(); // SC 
+		V(mutexV); 
+	} 
+
+	Personne {
+		P(mutexNb);
+		nbP++; // 1, 2
+		if(nbP == 1) P(mutexV); 
+		if(nbP > 10) P(mutexP); 
+		V(mutexNb);
+	
+		Travercer(); 
+	
+		P(mutexNb);
+		nbP--;
+		if(nbP > 9) V(mutexP);
+		if(nbP == 0) V(mutexV);
+		V(mutexNb);
+	
+
+
+Micro:
+
+#1 max 50 Etudiant
+#2 il y a 2 ports
+
+	int nbE = 0;
+	Semaphore mutexNb = 1, mutexCharge = 0, mutexES1 = 1, mutexES2 = 1;
+
+	Monter1{
+		P(mutexNb);
+		nbE++;
+		if(nbE > 50) P(mutexCharge);
+		V(mutexNb);
+
+		P(mutexES1);
+		monterP1();	
+		V(mutexES1);
+	}
+	Sortire1{
+
+		P(mutexES1);
+		sortireP1();
+		V(mutexES1);
+
+		P(mutexNb);
+		nbE--;
+		if(nbE < 49) V(mutexCharge);
+		V(mutexNb);
+	}
+	Monter2{
+		P(mutexNb);
+		nbE++;
+		if(nbE > 50) P(mutexCharge);
+		V(mutexNb);
+
+		P(mutexES2);
+		monterP2();	
+		V(mutexES2);
+	}
+	Sortire2{
+
+		P(mutexES2);
+		sortireP2();
+		V(mutexES2);
+
+		P(mutexNb);
+		nbE--;
+		if(nbE < 49) V(mutexCharge);
+		V(mutexNb);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

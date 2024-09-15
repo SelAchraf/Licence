@@ -1,0 +1,102 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.background-image{
+    background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+}
+header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #04060652;
+}
+.menu_bar{
+    width: 100%;
+    height: 80%;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+.menu_bar ul {
+    display: inline-flex;
+    list-style: none;
+}
+.menu_bar ul li{
+    margin-left: 25px;
+    padding: 7px;
+}
+.menu_bar ul li a{
+    text-decoration:none;
+    color: aliceblue;
+    transition: 0.4s;
+    font-family: Arial;
+    font-weight: bold;
+}
+.active, .menu_bar ul li:hover{
+    background:rgba(131, 170, 210, 0.3);
+    border-radius: 3px;
+    transition: 0.5s;
+} 
+.choose_menu{
+    display: none;
+}
+.menu_bar ul li:hover .choose_menu{
+    display:block;
+    position: absolute;
+    background:rgba(5, 25, 104,0.6);
+    margin-top: 9px;
+    margin-left: -65px ;
+    border-radius: 5px;
+}
+.menu_bar ul li:hover .choose_menu ul{
+    margin:10px;
+}
+.menu_bar ul li:hover .choose_menu ul li{
+    width: 102px;
+    margin-left: 0px;
+}
+.logo{
+    width: 70px;
+    height: 55px;
+    margin-left: 4px;
+    margin-top: -5px;
+    border-radius: 20px;
+}
+.logo_name{
+    font-size:20px;
+    font-style:oblique;
+    margin-left: 75px;
+    margin-top: -55px;
+    color:rgba(147, 180, 199, .6);
+}
+.note_espace{
+    position: absolute;
+    width: 45%;
+    height: 22%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 200px;
+    margin-left: 350px;
+    background-color: rgba(147, 180, 199, .6);
+    border-radius: 30px;
+}
+.note_titre{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 200px;
+    color:rgb(5, 25, 104);
+}
+.note{
+    position: absolute;
+    font-size: 20px;
+    padding-right: 15px;
+    margin-top: 50px;
+    text-align: justify;
+}

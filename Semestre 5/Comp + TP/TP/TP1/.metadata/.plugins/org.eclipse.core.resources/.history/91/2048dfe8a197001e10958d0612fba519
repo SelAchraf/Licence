@@ -1,0 +1,98 @@
+package Exo3;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Exo3 {
+
+    public static void main(String[] args) {
+        String nomFichier = "etudiants.txt"; // Remplacez avec le nom de votre fichier
+
+        // Charger les étudiants depuis le fichier
+        List<Etudiant> etudiants = chargerEtudiants(nomFichier);
+
+        // Afficher les étudiants nés avant une certaine année
+        int anneeLimite = 1995; // Remplacez avec l'année de votre choix
+        afficherEtudiantsNesAvant(anneeLimite, etudiants);
+
+        // Afficher les étudiants dont le nom commence par une certaine séquence
+        String prefixeNom = "ben"; // Remplacez avec le préfixe de votre choix
+        afficherEtudiantsAvecNomPrefixe(prefixeNom, etudiants);
+    }
+
+    // Méthode pour charger les étudiants depuis un fichier
+    private static List<Etudiant> chargerEtudiants(String nomFichier) {
+        List<Etudiant> etudiants = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(nomFichier))) {
+            String ligne;
+            while ((ligne = br.readLine()) != null) {
+                String[] elements = ligne.split(",");
+                if (elements.length == 3) {
+                    String nom = elements[0].trim().toLowerCase();
+                    String prenom = elements[1].trim().toLowerCase();
+                    int anneeNaissance = Integer.parseInt(elements[2].trim());
+                    etudiants.add(new Etudiant(nom, prenom, anneeNaissance));
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return etudiants;
+    }
+
+    // Méthode pour afficher les étudiants nés avant une certaine année
+    private static void afficherEtudiantsNesAvant(int annee, List<Etudiant> etudiants) {
+        System.out.println("Étudiants nés avant " + annee + ":");
+        for (Etudiant etudiant : etudiants) {
+            if (etudiant.getAnneeNaissance() < annee) {
+                System.out.println(etudiant);
+            }
+        }
+        System.out.println();
+    }
+
+    // Méthode pour afficher les étudiants dont le nom commence par une certaine séquence
+    private static void afficherEtudiantsAvecNomPrefixe(String prefixe, List<Etudiant> etudiants) {
+        System.out.println("Étudiants dont le nom commence par '" + prefixe + "':");
+        for (Etudiant etudiant : etudiants) {
+            if (etudiant.getNom().startsWith(prefixe)) {
+                System.out.println(etudiant);
+            }
+        }
+    }
+
+}
+
+// Classe pour représenter un étudiant
+class Etudiant {
+    private String nom;
+    private String prenom;
+    private int anneeNaissance;
+
+    public Etudiant(String nom, String prenom, int anneeNaissance) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.anneeNaissance = anneeNaissance;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public int getAnneeNaissance() {
+        return anneeNaissance;
+    }
+
+    @Override
+    public String toString() {
+        return nom + ", " + prenom + ", " + anneeNaissance;
+    }
+}

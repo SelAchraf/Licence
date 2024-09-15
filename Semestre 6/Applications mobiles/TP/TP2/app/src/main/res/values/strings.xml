@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tp2_Login_Page</string>
+    <string name="login_page">Login_Page</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="user_name">User Name</string>
+</resources>
